@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20200403155112) do
   end
 
   add_foreign_key "amusement_parks", "rides"
+  add_foreign_key "rides", "amusement_parks"
   add_foreign_key "ride_mechanics", "mechanics"
   add_foreign_key "ride_mechanics", "rides"
-  add_foreign_key "rides", "amusement_parks"
 end
