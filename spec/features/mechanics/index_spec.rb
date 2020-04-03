@@ -12,14 +12,12 @@ RSpec.describe "As a visitor on the mechanics index page", type: :feature do
       expect(page).to have_content("All Mechanics")
 
       within('.mechanics-index') do
-        expect(page).to have_content(mechanic_1.name)
-        expect(page).to have_content(mechanic_1.years_experience)
+        expect(page).to have_content("#{mechanic_1.name}: #{mechanic_1.years_experience} years of experience")
 
-        expect(page).to have_content(mechanic_2.name)
-        expect(page).to have_content(mechanic_2.years_experience)
+        expect(page).to have_content("#{mechanic_2.name}: #{mechanic_2.years_experience} years of experience")
 
-        expect(page).to have_content(mechanic_3.name)
-        expect(page).to have_content(mechanic_3.years_experience)
+        expect(page).to have_content("#{mechanic_3.name}: #{mechanic_3.years_experience} years of experience")
+
       end
   end
 end
