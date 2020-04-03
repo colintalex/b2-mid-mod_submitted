@@ -17,7 +17,7 @@ RSpec.describe "As a visitor on the amusement parks show page", type: :feature d
     ride_3 = park_1.rides.create(name:"Shopping Cart Ride", thrill_rating:2)
 
     visit "/amusement_parks/#{park_1.id}"
-
+    save_and_open_page
     within('.park-rides-index') do
       expect(page).to have_content(ride_2.name)
 
